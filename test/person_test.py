@@ -1,3 +1,3 @@
 from controller.person_controller import PersonController
 
-print(PersonController.remove(2))
+print(PersonController.find_by_family("messbah"))
