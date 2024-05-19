@@ -29,12 +29,10 @@ class DataAccess:
         session.commit()
         return entity
 
-    def remove(self, id):
-        entity = session.get(self.class_name, id)
-        if entity:
-            session.delete(entity)
-            session.commit()
-            return entity
+    def remove(self, entity):
+        session.delete(entity)
+        session.commit()
+        return entity
 
     def find_all(self):
         entity_list = session.query(self.class_name).all()
