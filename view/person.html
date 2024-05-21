@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/font-awesome.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+<body>
+<div class="container">
+    <form action="/person" method="post"  class="form-group">
+        Name <input class="form-control" type="text" name="name">
+        Family <input class="form-control" type="text" name="family">
+        <button class="btn btn-success">Save <i class="fa fa-save"></i></button>
+    </form>
+
+</div>
+
+<div id="table-div">
+        <table  class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Family</th>
+            <th>Operation</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for person in person_list[1]: %}
+        <tr>
+            <td>{{person.id}}</td>
+            <td>{{person.name}}</td>
+            <td>{{person.family}}</td>
+            <td>
+                <button class="btn btn-warning" onclick="edit({{person.id}})" >Edit <i class="fa fa-edit"></i></button>
+                <button class="btn btn-danger" onclick="remove({{person.id}})">Remove <i class="fa fa-remove"></i></button>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/font-awesome.js')}}"></script>
+<script src="{{url_for('static', filename='js/person.js')}}"></script>
+</body>
+</html>

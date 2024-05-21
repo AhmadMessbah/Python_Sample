@@ -1,0 +1,14 @@
+form{
+    width:40%;
+    margin:50px auto;
+}
+
+form input{
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+#table-div{
+    width: 60%;
+    margin: auto;
+}
