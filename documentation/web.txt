@@ -1,0 +1,16 @@
+Internet/Web Technology
+
+Ip
+TCP
+Http/Https
+
+Http Request (methods, header)
+Http Response (status code)
+
+html,
+css , (bootstrap, tailwind)
+javaScript  (jquery)
+
+webServer, webApplication
+
+flask, django

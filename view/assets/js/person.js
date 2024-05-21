@@ -1,9 +1,11 @@
-function edit(id){
+function edit(id) {
     alert("Edit : " + id);
 }
 
 
-
-function remove(id){
-    alert("DELETE : " + id);
+async function remove(id) {
+    await fetch("/person?id="+id , {
+        method: "DELETE"
+    })
+        .then(response => document.location.replace("/person"));
 }
