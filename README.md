@@ -4,5 +4,5 @@ This is Python Sample for Mft.
 
     # MySQL
 
-    @ SQL Alchemy
+    # SQL Alchemy
 
